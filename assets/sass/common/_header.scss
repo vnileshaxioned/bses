@@ -8,7 +8,7 @@ header {
 .logo { @include flexBasis(12.8%); }
 
 .main-logo {
-  padding: 20px;
+  padding: 20px 24.5%;
   background-color: $logobg-color;
   color: $primary-color;
   @include fontProperty($size: 32px, $weight: 900);

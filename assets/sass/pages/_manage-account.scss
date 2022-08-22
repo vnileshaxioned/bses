@@ -1,0 +1,49 @@
+main { @include flexBox(flex); }
+.hamburger { display: none; }
+
+.sidebar {
+  position: relative;
+  background-color: $secondary-dark;
+  @include flexBasis(15.7%);
+}
+
+.navbar { padding: 15px 0; }
+
+.menu {
+  @include flexBox(flex, $direction: column);
+}
+
+.menu-item {
+  padding: 10px 12%;
+  color: $text-color;
+  @include fontProperty($size: 10px);
+  text-transform: capitalize;
+
+  &-active {
+    color: $white;
+  }
+}
+
+.live-chat {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $live-chat-bg-color;
+  text-align: center;
+
+  &-cta {
+    padding: 12px 12%;
+    @include flexBox(flex, $align-items: center);
+    color: $text-color;
+    @include fontProperty($size: 10px);
+    text-transform: uppercase;
+
+    &::before {
+      content: '\f086';
+      margin-right: 6%;
+      @include fontProperty('FontAwesome', 28px);
+      float: left;
+    }
+  }
+}
