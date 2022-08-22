@@ -116,4 +116,151 @@ li {
   margin: 0 auto;
 }
 
+header .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo {
+  -ms-flex-preferred-size: 12.8%;
+  flex-basis: 12.8%;
+}
+
+.main-logo {
+  padding: 20px;
+  background-color: #F6F6F6;
+  color: #C7000C;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.profile-attachment {
+  margin-right: 2%;
+}
+
+.profile-image {
+  border-radius: 50%;
+}
+
+.main-heading {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.account-number {
+  color: #C7000C;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.address, .date-due {
+  color: #000;
+  font-size: 10px;
+}
+
+.header-content {
+  -ms-flex-preferred-size: 87.2%;
+  flex-basis: 87.2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-align: space-between;
+  -ms-flex-align: space-between;
+  justify-content: space-between;
+}
+
+.profile {
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.payment {
+  margin-left: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-preferred-size: 51%;
+  flex-basis: 51%;
+}
+.payment-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  justify-content: flex-end;
+  -ms-flex-preferred-size: 51%;
+  flex-basis: 51%;
+}
+.payment-content {
+  flex-basis: 51%;
+}
+
+.pay-now, .save-date {
+  -ms-flex-preferred-size: 47%;
+  flex-basis: 47%;
+}
+.pay-now-cta, .save-date-cta {
+  padding: 8px 24%;
+  border-radius: 4px;
+  background-color: #C7000C;
+  color: #fff;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.save-date {
+  margin-left: 6%;
+}
+.save-date-cta {
+  padding: 8px 20%;
+  background-color: #4C4C4C;
+}
+
+.header-cta {
+  margin-left: 4.6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  justify-content: flex-end;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.print, .download {
+  padding: 0 20px;
+  border-right: 1px solid #DFDFDF;
+  color: #272727;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.download {
+  border-right: none;
+}
+
 /*# sourceMappingURL=style.css.map */

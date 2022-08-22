@@ -1,0 +1,108 @@
+header {
+  .wrapper {
+    width: 100%;
+    @include flexBox(flex);
+  }
+}
+
+.logo { @include flexBasis(12.8%); }
+
+.main-logo {
+  padding: 20px;
+  background-color: $logobg-color;
+  color: $primary-color;
+  @include fontProperty($size: 32px, $weight: 900);
+  text-transform: uppercase;
+}
+
+.profile-attachment { margin-right: 2%; }
+.profile-image { border-radius: 50%; }
+
+.main-heading {
+  @include fontProperty($size: 14px);
+  text-transform: uppercase;
+}
+
+.account-number {
+  color: $primary-color;
+  @include fontProperty($size: 12px, $weight: 600);
+}
+
+.address {
+  color: $black;
+  @include fontProperty($size: 10px);
+}
+
+.header-content {
+  @include flexBasis(87.2%);
+  @include flexBox(flex, $align-items: center, $justify: space-between);
+}
+
+.profile {
+  margin-left: 5%;
+  @include flexBox(flex, $align-items: center);
+  @include flexBasis(50%);
+}
+
+.payment {
+  margin-left: 4%;
+  @include flexBox(flex, $align-items: center);
+  @include flexBasis(51%);
+
+  &-cta {
+    @include flexBox(flex, $align-items: center, $justify: flex-end);
+    @include flexBasis(51%);
+  }
+
+
+  &-content {
+    flex-basis: 51%;
+  }
+}
+
+.date-due {
+  @extend .address;
+}
+
+.pay-now {
+  @include flexBasis(47%);
+
+  &-cta {
+    padding: 8px 24%;
+    border-radius: 4px;
+    background-color: $primary-color;
+    color: $white;
+    @include fontProperty($size: 10px);
+    text-transform: capitalize;
+  }
+}
+
+.save-date {
+  @extend .pay-now;
+  margin-left: 6%;
+
+  &-cta {
+    @extend .pay-now-cta;
+    padding: 8px 20%;
+    background-color: $secondary-color;
+  }
+}
+
+.header-cta {
+  margin-left: 4.6%;
+  @include flexBox(flex, $align-items: center, $justify: flex-end);
+  @include flexBasis(50%);
+}
+
+.print {
+  padding: 0 20px;
+  border-right: 1px solid $secondary-light;
+  color: $secondary-dark;
+  @include fontProperty($size: 12px);
+  text-transform: uppercase;
+}
+
+.download {
+  @extend .print;
+  border-right: none;
+}
