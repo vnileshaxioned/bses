@@ -1,10 +1,15 @@
-main { @include flexBox(flex); }
+// siderbar section starts here
+main {
+  @include flexBox(flex);
+  background-color: $body-color;
+}
+
 .hamburger { display: none; }
 
 .sidebar {
   position: relative;
   background-color: $secondary-dark;
-  @include flexBasis(15.7%);
+  @include flexBasis(16.5%);
 }
 
 .navbar { padding: 15px 0; }
@@ -14,7 +19,8 @@ main { @include flexBox(flex); }
 }
 
 .menu-item {
-  padding: 10px 12%;
+  padding: 9px 12%;
+  @include flexBox(flex, $align-items: center);
   color: $text-color;
   @include fontProperty($size: 10px);
   text-transform: capitalize;
@@ -22,7 +28,28 @@ main { @include flexBox(flex); }
   &-active {
     color: $white;
   }
+
+  &::before {
+    margin-right: 7%;
+    @include fontProperty('FontAwesome', 12px);
+    float: left;
+  }
 }
+
+.dashboard::before { content: '\f015'; }
+.bill-details::before { content: '\f15c'; }
+
+.bill-analysis::before {
+  content: '\f201';
+  margin-right: 4%;
+}
+
+.alert-prefrences::before {
+  content: '\f0f3';
+  margin-right: 4%;
+}
+
+.manage-account::before { content: '\f007'; }
 
 .live-chat {
   width: 100%;
@@ -47,3 +74,169 @@ main { @include flexBox(flex); }
     }
   }
 }
+// siderbar section ends here
+// profile section starts here
+.profile-section {
+  @include flexBasis(76%);
+
+  .wrapper { width: 96.8%; }
+}
+
+.account-container {
+  @include flexBox(flex, $direction: column);
+}
+
+.account-list {
+  padding: 11px 2%;
+  margin: 15px 0 0;
+  background-color: $white;
+}
+
+.heading {
+  padding-bottom: 2px;
+  border-bottom: 1px solid $secondary-light;
+  @include fontProperty($size: 11px, $weight: 600);
+  text-transform: uppercase
+}
+
+.information {
+  margin-top: 15px;
+  @include flexBox(flex, $align-items: center, $justify: space-between);
+}
+
+.instruction-text {
+  @include fontProperty($size: 12px);
+}
+
+.profile-cta-link {
+  color: $secondary-color;
+  text-indent: -9999px;
+
+  &::before {
+    content: '\f044';
+    @include fontProperty('FontAwesome');
+    float: right;
+    text-indent: 0;
+  }
+}
+
+.form-container {
+  margin-top: 22px;
+  @include flexBox(flex, $justify: space-between);
+}
+
+.profile-complete {
+  margin-right: 12%;
+  @include flexBasis(20%);
+}
+
+.profile-completion {
+  padding: 32px 0;
+  margin-left: 2%;
+  border-radius: 50%;
+  @include flexBox(flex, $align-items: center, $direction: column);
+  background-color: $black;
+  color: $white;
+}
+
+.profile-head {
+  @include fontProperty($size: 14px);
+}
+
+.profile-percentage {
+  @include fontProperty($size: 42px);
+}
+
+.language {
+  margin-top: 10px;
+  position: relative;
+
+  &-preference {
+    margin-left: 10%;
+    @include fontProperty($line-height: .8);
+  }
+
+  span {
+    @include fontProperty($size: 11px, $weight: 600);
+
+    &::before {
+      content: '\f27a';
+      position: absolute;
+      top: 4px;
+      left: 0;
+      color: $primary-color;
+      @include fontProperty('FontAwesome', 12px);
+      float: left;
+    }
+  }
+}
+
+.select-language {
+  color: $black;
+  @include fontProperty($size: 11px);
+}
+
+.profile-information {
+  margin-right: 5%;
+  @include flexBox(flex, $direction: column);
+  @include flexBasis(24%);
+}
+
+.information-list {
+  padding-bottom: 10px;
+}
+
+.form-input { @include flexBasis(26%); }
+
+.information-list {
+  position: relative;
+
+  &:nth-child(1) .information-heading::before { content: '\f007'; }
+  &:nth-child(2) .information-heading::before { content: '\f095'; }
+  &:nth-child(3) .information-heading::before { content: '\f041'; }
+  &:nth-child(4) .information-heading::before { content: '\f0e0'; }
+}
+
+.information-heading {
+  margin-left: 8%;
+  @include fontProperty($size: 12px);
+
+  &::before {
+    position: absolute;
+    left: 0;
+    color: $primary-color;
+    @include fontProperty('FontAwesome', 14px);
+  }
+}
+
+.address-info {
+  display: block;
+}
+
+.information-cta {
+  margin-left: 8%;
+  color: $secondary-color;
+  @include fontProperty($size: 12px);
+}
+
+.form-heading {
+  margin-bottom: 10px;
+  @include fontProperty($size: 12px, $weight: 600);
+}
+
+.form-date {
+  width: 9%;
+  padding: 7px;
+  @include fontProperty($size: 10px);
+
+  &::placeholder { text-transform: uppercase; }
+  &:last-child { width: 15%; }
+}
+// profile section ends here
+// bill payment section starts here
+.bill-payment {
+  @include flexBasis(37%);
+
+  .wrapper { width: 100%; }
+}
+// bill payment section ends here

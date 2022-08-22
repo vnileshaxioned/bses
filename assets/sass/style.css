@@ -267,6 +267,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #EFEFEF;
 }
 
 .hamburger {
@@ -276,8 +277,8 @@ main {
 .sidebar {
   position: relative;
   background-color: #272727;
-  -ms-flex-preferred-size: 15.7%;
-  flex-basis: 15.7%;
+  -ms-flex-preferred-size: 16.5%;
+  flex-basis: 16.5%;
 }
 
 .navbar {
@@ -295,13 +296,47 @@ main {
 }
 
 .menu-item {
-  padding: 10px 12%;
+  padding: 9px 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #8C8787;
   font-size: 10px;
   text-transform: capitalize;
 }
 .menu-item-active {
   color: #fff;
+}
+.menu-item::before {
+  margin-right: 7%;
+  font-family: "FontAwesome";
+  font-size: 12px;
+  float: left;
+}
+
+.dashboard::before {
+  content: "\f015";
+}
+
+.bill-details::before {
+  content: "\f15c";
+}
+
+.bill-analysis::before {
+  content: "\f201";
+  margin-right: 4%;
+}
+
+.alert-prefrences::before {
+  content: "\f0f3";
+  margin-right: 4%;
+}
+
+.manage-account::before {
+  content: "\f007";
 }
 
 .live-chat {
@@ -330,6 +365,222 @@ main {
   font-family: "FontAwesome";
   font-size: 28px;
   float: left;
+}
+
+.profile-section {
+  -ms-flex-preferred-size: 76%;
+  flex-basis: 76%;
+}
+.profile-section .wrapper {
+  width: 96.8%;
+}
+
+.account-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.account-list {
+  padding: 11px 2%;
+  margin: 15px 0 0;
+  background-color: #fff;
+}
+
+.heading {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #DFDFDF;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.information {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-align: space-between;
+  -ms-flex-align: space-between;
+  justify-content: space-between;
+}
+
+.instruction-text {
+  font-size: 12px;
+}
+
+.profile-cta-link {
+  color: #4C4C4C;
+  text-indent: -9999px;
+}
+.profile-cta-link::before {
+  content: "\f044";
+  font-family: "FontAwesome";
+  float: right;
+  text-indent: 0;
+}
+
+.form-container {
+  margin-top: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: space-between;
+  -ms-flex-align: space-between;
+  justify-content: space-between;
+}
+
+.profile-complete {
+  margin-right: 12%;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+}
+
+.profile-completion {
+  padding: 32px 0;
+  margin-left: 2%;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+}
+
+.profile-head {
+  font-size: 14px;
+}
+
+.profile-percentage {
+  font-size: 42px;
+}
+
+.language {
+  margin-top: 10px;
+  position: relative;
+}
+.language-preference {
+  margin-left: 10%;
+  line-height: 0.8;
+}
+.language span {
+  font-size: 11px;
+  font-weight: 600;
+}
+.language span::before {
+  content: "\f27a";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  color: #C7000C;
+  font-family: "FontAwesome";
+  font-size: 12px;
+  float: left;
+}
+
+.select-language {
+  color: #000;
+  font-size: 11px;
+}
+
+.profile-information {
+  margin-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-preferred-size: 24%;
+  flex-basis: 24%;
+}
+
+.information-list {
+  padding-bottom: 10px;
+}
+
+.form-input {
+  -ms-flex-preferred-size: 26%;
+  flex-basis: 26%;
+}
+
+.information-list {
+  position: relative;
+}
+.information-list:nth-child(1) .information-heading::before {
+  content: "\f007";
+}
+.information-list:nth-child(2) .information-heading::before {
+  content: "\f095";
+}
+.information-list:nth-child(3) .information-heading::before {
+  content: "\f041";
+}
+.information-list:nth-child(4) .information-heading::before {
+  content: "\f0e0";
+}
+
+.information-heading {
+  margin-left: 8%;
+  font-size: 12px;
+}
+.information-heading::before {
+  position: absolute;
+  left: 0;
+  color: #C7000C;
+  font-family: "FontAwesome";
+  font-size: 14px;
+}
+
+.address-info {
+  display: block;
+}
+
+.information-cta {
+  margin-left: 8%;
+  color: #4C4C4C;
+  font-size: 12px;
+}
+
+.form-heading {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.form-date {
+  width: 9%;
+  padding: 7px;
+  font-size: 10px;
+}
+.form-date::placeholder {
+  text-transform: uppercase;
+}
+.form-date:last-child {
+  width: 15%;
+}
+
+.bill-payment {
+  -ms-flex-preferred-size: 37%;
+  flex-basis: 37%;
+}
+.bill-payment .wrapper {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
