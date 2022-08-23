@@ -26,6 +26,7 @@ main {
   color: $text-color;
   @include fontProperty($size: 10px);
   text-transform: capitalize;
+  @include transition(all .3s ease);
 
   &-active {
     color: $white;
@@ -35,6 +36,10 @@ main {
     margin-right: 7%;
     @include fontProperty('FontAwesome', 12px);
     float: left;
+  }
+
+  @include reverseResponsive($tablet) {
+    &:hover { color: $white; }
   }
 }
 
@@ -60,19 +65,24 @@ main {
   left: 0;
   background-color: $live-chat-bg-color;
   text-align: center;
-
+  
   &-cta {
     padding: 12px 12%;
     @include flexBox(flex, $align-items: center);
     color: $text-color;
     @include fontProperty($size: 10px);
     text-transform: uppercase;
+    @include transition(all .3s ease);
 
     &::before {
       content: '\f086';
       margin-right: 6%;
       @include fontProperty('FontAwesome', 28px);
       float: left;
+    }
+
+    @include reverseResponsive($tablet) {
+      &:hover { color: $white; }
     }
   }
 }
@@ -89,7 +99,7 @@ main {
 }
 
 .account-list {
-  padding: 11px 2%;
+  padding: 11px 2% 17px;
   margin: 15px 0 0;
   background-color: $white;
 }
@@ -181,6 +191,11 @@ main {
 .select-language {
   color: $black;
   @include fontProperty($size: 11px);
+  @include transition(all .3s ease);
+
+  @include reverseResponsive($tablet) {
+    &:hover { color: $primary-color; }
+  }
 }
 
 .profile-information {
@@ -222,6 +237,11 @@ main {
   margin-left: 11%;
   color: $secondary-color;
   @include fontProperty($size: 11px);
+  @include transition(all .3s ease);
+
+  @include reverseResponsive($tablet) {
+    &:hover { color: $primary-color; }
+  }
 }
 
 .form-heading {
@@ -262,8 +282,10 @@ main {
   color: $black;
   @include fontProperty($size: 10px);
   text-align: center;
+  @include transition(all .3s ease);
 
   &-active {
+    border: 1px solid $secondary-color;
     background-color: $secondary-color;
     color: $white;
   }
@@ -272,6 +294,14 @@ main {
     margin-right: 8%;
     @include fontProperty('FontAwesome');
     float: inherit;
+  }
+
+  @include reverseResponsive($tablet) {
+    &:hover {
+      border: 1px solid $secondary-color;
+      background-color: $secondary-color;
+      color: $white;
+    }
   }
 }
 
@@ -289,9 +319,15 @@ main {
 .confirm-label {
   color: $text-color;
   @include fontProperty($size: 11px);
+  @include transition(all .3s ease);
+
+  @include reverseResponsive($tablet) {
+    &:hover { color: $primary-color; }
+  }
 }
 
 .form-submit {
+  margin: 0;
   border-top: 1px solid $secondary-light;
 
   input {
@@ -304,6 +340,129 @@ main {
     color: $white;
     @include fontProperty($size: 10px);
     text-transform: capitalize;
+    @include transition(all .3s ease);
+
+    @include reverseResponsive($tablet) {
+      &:hover { background-color: $secondary-dark; }
+    }
+  }
+}
+
+.energy-top {
+  margin: 15px 0;
+  @include flexBox(flex);
+
+  .content-left {
+    margin: 0 8% 50px;
+    position: relative;
+    @include flexBasis(63.5%);
+  }
+
+  .content-right {
+    @include flexBox(flex, $align-items: center, $direction: column);
+    @include flexBasis(10%);
+  }
+}
+
+.energy-heading {
+  @include fontProperty($size: 11px);
+}
+
+.target {
+  margin: 7px 0;
+  background-color: $secondary-light;
+  @include fontProperty($line-height: 1.7);
+}
+
+.score {
+  width: 74%;
+  display: block;
+  background-color: $tertiary-color;
+  text-indent: -9999px;
+}
+
+.energy-cta-link {
+  color: $primary-color;
+  @include fontProperty($size: 11px);
+  text-decoration: underline;
+  @include transition(all .3s ease);
+
+  @include reverseResponsive($tablet) {
+    &:hover { color: $primary-dark; }
+  }
+}
+
+.discount {
+  width: 25.5%;
+  border: 1px outset $secondary-light;
+  border-radius: 8px;
+  position: absolute;
+  top: 67px;
+  left: 70.5%;
+}
+
+.offer {
+  padding: 7px 0;
+  display: block;
+  color: $secondary-color;
+  @include fontProperty($size: 11px);
+  text-align: center;
+}
+
+.milestone-heading {
+  @include fontProperty($size: 14px);
+}
+
+.milestone-percentage {
+  @include fontProperty($size: 44px, $weight: 600);
+}
+
+.energy-bottom {
+  padding: 16px;
+  @include flexBox(flex, $align-items: center, $justify: flex-end);
+  background-color: $logobg-color;
+}
+
+.energy-bottom-heading {
+  @include fontProperty($size: 12px);
+}
+
+.energy-bottom-left {
+  margin-right: 2%;
+  @include fontProperty($line-height: 0);
+}
+
+.energy-bottom-right {
+  @include flexBox(flex, $align-items: center);
+  @include flexBasis(45%);
+}
+
+.capacity-limit {
+  width: 29%;
+  padding: 5px 5%;
+  border: 1px outset $secondary-light;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.limit-edit {
+  padding: 5px 8px 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: $secondary-color;
+  color: $white;
+  text-indent: -9999px;
+  @include transition(all .3s ease);
+
+  &::before {
+    content: '\f044';
+    @include fontProperty('FontAwesome');
+    float: left;
+    text-indent: 0;
+  }
+
+  @include reverseResponsive($tablet) {
+    &:hover { background-color: $secondary-dark; }
   }
 }
 // profile section ends here

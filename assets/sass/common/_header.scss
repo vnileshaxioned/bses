@@ -8,10 +8,12 @@ header {
 .logo { @include flexBasis(12.8%); }
 
 .main-logo {
-  padding: 20px 24.5%;
+  padding: 20px 0;
+  display: block;
   background-color: $logobg-color;
   color: $primary-color;
   @include fontProperty($size: 32px, $weight: 900);
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -74,6 +76,11 @@ header {
     color: $white;
     @include fontProperty($size: 10px);
     text-transform: capitalize;
+    @include transition(all .3s ease);
+
+    @include reverseResponsive($tablet) {
+      &:hover { background-color: $primary-dark; }
+    }
   }
 }
 
@@ -85,6 +92,11 @@ header {
     @extend .pay-now-cta;
     padding: 8px 20%;
     background-color: $secondary-color;
+    @include transition(all .3s ease);
+
+    @include reverseResponsive($tablet) {
+      &:hover { background-color: $secondary-dark; }
+    }
   }
 }
 
@@ -94,15 +106,41 @@ header {
   @include flexBasis(50%);
 }
 
+.header-cta-link {
+  margin: 0 7px;
+  border-right: 1px solid $secondary-light;
+  position: relative;
+
+  &:last-child { border-right: none; }
+}
+
 .print {
-  padding: 0 20px;
+  padding: 0 16px;
+  display: block;
   border-right: 1px solid $secondary-light;
   color: $secondary-dark;
-  @include fontProperty($size: 12px);
+  @include fontProperty($size: 10px);
   text-transform: uppercase;
+  @include transition(all .3s ease);
+
+  &::before {
+    content: '\f02f';
+    position: absolute;
+    left: 0;
+    @include fontProperty('FontAwesome');
+    float: left;
+  }
+  
+  @include reverseResponsive($tablet) {
+    &:hover { color: $primary-color; }
+  }
 }
 
 .download {
   @extend .print;
   border-right: none;
+
+  &::before {
+    content: '\f019';
+  }
 }
